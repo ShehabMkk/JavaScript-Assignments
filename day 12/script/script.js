@@ -1,245 +1,169 @@
-// Example 1: Weather check
-let currentTemp = 18;
-if (currentTemp < 10) {
-    console.log("It's a cold day!");
-} else if (currentTemp < 25) {
-    console.log("It's a pleasant day!");
-} else {
-    console.log("It's a warm day!");
-}
+window.alert("Welcome to My Website");
+console.log("Welcome to My Website");
+document.write("Welcome to My Website");
+// --------------------------------------------------------------------------------------------------
+// Variable Declarations and Types
+let city = "Cairo";
+let population = 9500000;
+let isCapital = true;
+let temperature;
+let mayor = null;
 
-// Example 2: Greeting based on time
-let currentHour = 20;
-if (currentHour < 12) {
-    console.log("Good morning!");
-} else if (currentHour < 17) {
-    console.log("Good afternoon!");
-} else {
-    console.log("Good evening!");
-}
+console.log(`City: ${city}, Type: ${typeof city}`);
+console.log(`Population: ${population}, Type: ${typeof population}`);
+console.log(`Is Capital: ${isCapital}, Type: ${typeof isCapital}`);
+console.log(`Temperature: ${temperature}, Type: ${typeof temperature}`);
+console.log(`Mayor: ${mayor}, Type: ${typeof mayor}`);
+// --------------------------------------------------------------------------------------------------
+// Numbers and Math
+let apples = 12;
+apples -= 2;
+console.log(`Apples left: ${apples}`);
 
-// Example 3: Membership and purchase
-let hasLoyaltyCard = false;
-let purchaseAmount = 75;
-if (hasLoyaltyCard) {
-    if (purchaseAmount > 50) {
-        console.log("You get a 15% loyalty discount!");
+let price = 19.99;
+let discount = 5;
+let total = price - discount;
+let area = 6 * 7;
+let sqrtValue = Math.sqrt(49);
+let quotient = 20 / 3;
+
+let strNum = "123";
+let parsedNum = parseInt(strNum);
+// --------------------------------------------------------------------------------------------------
+// String Operations
+let animal = "elephant";
+console.log(animal.length);
+console.log(animal.toUpperCase());
+console.log(animal.toLowerCase());
+console.log(animal.substring(2, 6));
+console.log(animal.charAt(4));
+console.log(animal.indexOf("ph"));
+
+let first = "shehab";
+let last = "mohamed";
+let combined = first + " " + last;
+let combinedTemplate = `${first} ${last}`;
+console.log(combinedTemplate);
+
+console.log("Code"[1]);
+console.log("Learning JavaScript, \"Step by Step.\"");
+console.log("Line1\n\tLine2");
+
+const letter = "z";
+console.log(letter.charCodeAt(0));
+// --------------------------------------------------------------------------------------------------
+// Arithmetic Operators
+let x = 8, y = 2;
+console.log(x + y);
+console.log(x - y);
+console.log(x * y);
+console.log(x / y);
+console.log(x % y);
+console.log(x++);
+console.log(++x);
+console.log(x ** y);
+// --------------------------------------------------------------------------------------------------
+// Comparison and Logical Operators
+console.log(5 < 3);
+console.log(5 > 3);
+console.log(5 <= 3);
+console.log(5 >= 3);
+console.log(5 == "5");
+console.log(5 === "5");
+console.log(5 != "5");
+console.log(5 !== "5");
+
+console.log(false && true);
+console.log(true && true);
+console.log(false || true);
+console.log(false || false);
+console.log(!false);
+// --------------------------------------------------------------------------------------------------
+// Conditional (Ternary) Operator
+let score = 75;
+let grade = score >= 60 ? "Pass" : "Fail";
+console.log(grade);
+// --------------------------------------------------------------------------------------------------
+// If-Else Statements
+let temp = -3;
+if (temp > 0) {
+    console.log("Temperature is above freezing");
+} else if (temp < 0) {
+    console.log("Temperature is below freezing");
+} else {
+    console.log("Temperature is exactly zero");
+}
+// --------------------------------------------------------------------------------------------------
+// Nested If
+let studentAge = 17;
+let hasID = false;
+if (studentAge >= 16) {
+    if (hasID) {
+        console.log("You can enter the exam.");
     } else {
-        console.log("Loyalty card holders get free samples!");
+        console.log("You need an ID to enter.");
     }
 } else {
-    console.log("Join our loyalty program for rewards!");
+    console.log("You are too young for the exam.");
 }
-
-// Example 4: Switch statement for animals
-let animal = "dog";
-switch (animal) {
-    case "cat":
-        console.log("Soft and purring");
+// --------------------------------------------------------------------------------------------------
+// Switch Statement
+let fruit = "Banana";
+switch (fruit) {
+    case "Apple":
+        console.log("It's an apple");
         break;
-    case "dog":
-        console.log("Loyal and barking");
-        break;
-    case "parrot":
-        console.log("Colorful and talking");
+    case "Banana":
+        console.log("It's a banana");
         break;
     default:
-        console.log("Unknown animal");
+        console.log("Unknown fruit");
+}
+// --------------------------------------------------------------------------------------------------
+// Loops
+for (let n = 1; n <= 3; n++) {
+    console.log(`For loop: ${n}`);
 }
 
-// Example 5: Ternary operator for login status
-let isLoggedIn = false;
-let loginMessage = isLoggedIn ? "Welcome back!" : "Please log in";
-console.log(loginMessage);
-
-// Example 6: For loop countdown
-console.log("Blastoff in:");
-for (let n = 3; n > 0; n--) {
-    console.log(n);
+let m = 0;
+while (m < 3) {
+    console.log(`While loop: ${m}`);
+    m++;
 }
 
-// Example 7: While loop for random string
-let code = "";
-while (code.length < 6) {
-    code += String.fromCharCode(65 + Math.floor(Math.random() * 26));
-    console.log("Generating code...");
+let p = 0;
+let output = "";
+do {
+    p++;
+    output += p + " ";
+} while (p < 3);
+console.log(output);
+// --------------------------------------------------------------------------------------------------
+// Functions
+function sayHello(person) {
+    console.log(`Hi, ${person}!`);
 }
-console.log(`Your code: ${code}`);
+sayHello("shehab");
 
-// Example 8: Function for perimeter
-function calcPerimeter(length, width) {
-    return 2 * (length + width);
+function multiplyNums(a, b) {
+    return a * b;
 }
-console.log(`Perimeter: ${calcPerimeter(4, 7)}`); // 22
+let productResult = multiplyNums(6, 7);
+console.log(productResult);
 
-// Example 9: Function to check odd
-function isOdd(num) {
-    return num % 2 !== 0;
-}
-console.log(`Is 9 odd? ${isOdd(9)}`); // true
-
-// Example 10: Arrow function greeting
-let greetUser = (username) => `Hi, ${username}!`;
-console.log(greetUser("Sara")); // "Hi, Sara!"
-
-// Example 11: Object for a movie
-let movie = {
-    name: "Inception",
-    director: "Christopher Nolan",
-    year: 2010,
-    isInStock: false,
-    status: function () {
-        return this.isInStock ? "Available" : "Out of stock";
+const subtract = (x, y) => x - y;
+console.log(subtract(10, 4));
+// --------------------------------------------------------------------------------------------------
+// Objects
+let car = {
+    brand: "Toyota",
+    model: "Corolla",
+    year: 2022,
+    color: "blue",
+    honk: function () {
+        console.log(`Beep! I am a ${car.brand}`);
     }
 };
-console.log(movie.status()); // "Out of stock"
-
-// Example 12: Object for a teacher
-let teacher = {
-    fullName: "shehab mohamed",
-    subject: "javascript"
-};
-teacher.experience = 12;
-console.log("Experience : ", teacher.experience); // 12
-
-teacher.subject = "Physics";
-console.log("Subject : ", teacher.subject); // Physics
-
-delete teacher.experience;
-console.log(teacher);
-
-// Example 13: Array of cities
-let cities = ["Cairo", "Fayoum", "Alexandria"];
-console.log(cities[2]); // "Tokyo"
-console.log("Number of cities : ", cities.length); // 3
-
-// Example 14: Array methods
-let scores = [10, 20, 30];
-
-scores.push(40);
-
-scores.pop();
-
-scores.unshift(5);
-
-scores.shift();
-console.log(scores); // [10, 20, 30]
-
-let tripled = scores.map(score => score * 3);
-console.log(tripled); // [30, 60, 90]
-
-let highScores = scores.filter(score => score > 15);
-console.log(highScores); // [20, 30]
-
-// Example 15: DOM manipulation
-let header = document.getElementById("mainHeader");
-console.log(header.innerHTML);  // e.g. "Welcome <span style=\"display:none\">hidden</span> to <b>JS</b>!"
-console.log(header.innerText);  // e.g. "Welcome to JS!"
-console.log(header.textContent); // e.g. "Welcome hidden to JS!"
-
-let infoPara = document.createElement("p");
-infoPara.textContent = "Info paragraph";
-document.body.appendChild(infoPara);
-
-let logo = document.createElement("img");
-let logoBox = document.getElementById("logo_box");
-
-logo.src = "image/logo.png";
-logo.alt = "Logo";
-
-logoBox.appendChild(logo);
-
-let obsolete = document.getElementById("obsolete-element");
-obsolete.remove();
-
-let outer = document.getElementById("outer");
-let inner = document.getElementById("inner");
-outer.removeChild(inner);
-
-// Example 16: Button event
-let actionBtn = document.getElementById('actionBtn');
-
-actionBtn.addEventListener('click', function () {
-    console.log('Action button pressed!');
-    this.textContent = 'Done!';
-});
-
-// Example 17: Box hover events
-let hoverArea = document.getElementById('hoverArea');
-
-hoverArea.addEventListener('mouseenter', function () {
-    this.style.backgroundColor = 'lightgreen';
-});
-
-hoverArea.addEventListener('mouseleave', function () {
-    this.style.backgroundColor = 'beige';
-});
-
-hoverArea.addEventListener('mousemove', function (e) {
-    console.log(`Mouse at X: ${e.clientX}, Y: ${e.clientY}`);
-});
-
-// Example 18: Keyboard event
-
-document.addEventListener('keydown', function (e) {
-    console.log(`Key pressed: ${e.key}`);
-
-    if (e.key === 'Enter') {
-        console.log('Enter key pressed');
-    }
-});
-
-// Example 19: Input field event
-let searchBox = document.getElementById('searchBox');
-searchBox.addEventListener('keyup', function (e) {
-    console.log(`Search: ${this.value}`);
-});
-
-// Example 20: Event delegation
-
-document.getElementById('listContainer').addEventListener('click', function (e) {
-    if (e.target.classList.contains('list-item')) {
-        console.log(`List item ${e.target.id} clicked`);
-    }
-});
-
-// Example 21: Link event
-
-document.getElementById('externalLink').addEventListener('click', function (e) {
-    e.preventDefault();
-
-    console.log('Event details:');
-    console.log('Target:', e.target);
-    console.log('Current Target:', e.currentTarget);
-});
-
-// Example 22: Drag and drop
-let dragItem = document.getElementById('dragItem');
-let dropArea = document.getElementById('dropArea');
-
-dragItem.addEventListener('dragstart', function (e) {
-    e.dataTransfer.setData('text/plain', this.id);
-    this.classList.add('dragging');
-});
-
-dragItem.addEventListener('dragend', function () {
-    this.classList.remove('dragging');
-});
-
-dropArea.addEventListener('dragover', function (e) {
-    e.preventDefault();
-    this.classList.add('dragover');
-});
-
-dropArea.addEventListener('dragleave', function () {
-    this.classList.remove('dragover');
-});
-
-dropArea.addEventListener('drop', function (e) {
-    e.preventDefault();
-    this.classList.remove('dragover');
-
-    let id = e.dataTransfer.getData('text/plain');
-    let dragged = document.getElementById(id);
-    this.appendChild(dragged);
-});
+console.log(car.brand);
+console.log(car["model"]);
+car.honk();
