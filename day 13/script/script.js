@@ -70,17 +70,17 @@ console.log(`Your code: ${code}`);
 function calcPerimeter(length, width) {
     return 2 * (length + width);
 }
-console.log(`Perimeter: ${calcPerimeter(4, 7)}`); // 22
+console.log(`Perimeter: ${calcPerimeter(4, 7)}`);
 
 // Example 9: Function to check odd
 function isOdd(num) {
     return num % 2 !== 0;
 }
-console.log(`Is 9 odd? ${isOdd(9)}`); // true
+console.log(`Is 9 odd? ${isOdd(9)}`);
 
 // Example 10: Arrow function greeting
 let greetUser = (username) => `Hi, ${username}!`;
-console.log(greetUser("Sara")); // "Hi, Sara!"
+console.log(greetUser("Shehab"));
 
 // Example 11: Object for a movie
 let movie = {
@@ -92,7 +92,7 @@ let movie = {
         return this.isInStock ? "Available" : "Out of stock";
     }
 };
-console.log(movie.status()); // "Out of stock"
+console.log(movie.status());
 
 // Example 12: Object for a teacher
 let teacher = {
@@ -100,18 +100,18 @@ let teacher = {
     subject: "javascript"
 };
 teacher.experience = 12;
-console.log("Experience : ", teacher.experience); // 12
+console.log("Experience : ", teacher.experience);
 
 teacher.subject = "Physics";
-console.log("Subject : ", teacher.subject); // Physics
+console.log("Subject : ", teacher.subject); 
 
 delete teacher.experience;
 console.log(teacher);
 
 // Example 13: Array of cities
 let cities = ["Cairo", "Fayoum", "Alexandria"];
-console.log(cities[2]); // "Tokyo"
-console.log("Number of cities : ", cities.length); // 3
+console.log(cities[2]);
+console.log("Number of cities : ", cities.length);
 
 // Example 14: Array methods
 let scores = [10, 20, 30];
@@ -123,19 +123,18 @@ scores.pop();
 scores.unshift(5);
 
 scores.shift();
-console.log(scores); // [10, 20, 30]
+console.log(scores); 
 
 let tripled = scores.map(score => score * 3);
-console.log(tripled); // [30, 60, 90]
+console.log(tripled); 
 
 let highScores = scores.filter(score => score > 15);
-console.log(highScores); // [20, 30]
-
+console.log(highScores); 
 // Example 15: DOM manipulation
 let header = document.getElementById("mainHeader");
-console.log(header.innerHTML);  // e.g. "Welcome <span style=\"display:none\">hidden</span> to <b>JS</b>!"
-console.log(header.innerText);  // e.g. "Welcome to JS!"
-console.log(header.textContent); // e.g. "Welcome hidden to JS!"
+console.log(header.innerHTML);  
+console.log(header.innerText); 
+console.log(header.textContent); 
 
 let infoPara = document.createElement("p");
 infoPara.textContent = "Info paragraph";
